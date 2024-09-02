@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <input type="text" placeholder="Primer Numero" id="num1">
+    <input type="text" placeholder="Segundo Numero" id="num2">
+    <input type="button" value="sumar" id="sumar" onclick="sumar()">
+    <br>
+
+    <h1>Ejercicio 2</h1>
+    <input type="button" value="nomrbre y Apellido" id="nombre"  onclick="nombre()">
+    <br>
+
+    <h1>Ejercicio 3</h1>
+    <input type="text" placeholder="Primer Numero" id="nume1">
+    <input type="text" placeholder="Segundo Numero" id="nume2">
+    <input type="button" value="Alert" onclick="mayor()">
+
+    <h1>Ejercicio 4</h1>
+    <input type="text" name="text" id="nomre" placeholder="Pone tu nombre y tu apellido"> 
+    <input type="button" value="cant. de caracteres" onclick="caracterers()">
+</body>
+<script>
+ 
+    function sumar(){
+    let n1 = document.getElementById("num1").value;
+    let n2 = document.getElementById("num2").value;
+    let n3 = parseInt(n1) + parseInt(n2);
+    console.log('resultado' + n3);
+    }
+
+    function nombre(){
+    let nom = "Ezequiel Duran";
+    console.log(nom);
+    }
+
+    function mayor(){
+    let n1 = document.getElementById("nume1").value;
+    let n2 = document.getElementById("nume2").value;
+    if(parseInt(n1) < parseInt(n2)){
+        window.alert('El mayor numero es: ' + n2);
+    } else {
+        window.alert('El mayor numero es: ' + n1);
+    }
+    }
+
+    function caracterers(){
+    let nombre = document.getElementById("nomre").value;
+    let numero = 0;
+    for (var i = 0; i < nombre.length; i ++){
+    numero++;
+    }
+    window.alert('La cantidad de caracteres es: ' + numero);
+    }
+
+</script>
+
+</html>
